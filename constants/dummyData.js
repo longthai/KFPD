@@ -66,11 +66,11 @@ const restaurantList = [
         viewers: [
             {
                 id: 1,
-                profilePic: images.UserProfile1
+                profilePic: images.foodora
             },
             {
                 id: 2,
-                profilePic: images.UserProfile2
+                profilePic: images.wolt
             }
         ]
     },
@@ -115,11 +115,11 @@ const restaurantList = [
         viewers: [
             {
                 id: 1,
-                profilePic: images.UserProfile1
+                profilePic: images.foodora
             },
             {
                 id: 2,
-                profilePic: images.UserProfile2
+                profilePic: images.wolt
             }
         ]
     },
@@ -181,12 +181,12 @@ const restaurantList = [
             {
                 id: 1,
                 name: "User 1",
-                profilePic: images.UserProfile1
+                profilePic: images.foodora
             },
             {
                 id: 2,
                 name: "User 2",
-                profilePic: images.UserProfile2
+                profilePic: images.wolt
             }
         ]
     },
@@ -216,12 +216,12 @@ const restaurantList = [
             {
                 id: 1,
                 name: "User 1",
-                profilePic: images.UserProfile1
+                profilePic: images.foodora
             },
             {
                 id: 2,
                 name: "User 2",
-                profilePic: images.UserProfile2
+                profilePic: images.wolt
             }
 
         ]
@@ -262,11 +262,11 @@ const restaurantList = [
         viewers: [
             {
                 id: 1,
-                profilePic: images.UserProfile1
+                profilePic: images.foodora
             },
             {
                 id: 2,
-                profilePic: images.UserProfile2
+                profilePic: images.wolt
             }
         ]
     },
