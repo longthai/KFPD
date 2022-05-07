@@ -3,12 +3,15 @@ import {
     View,
     Text,
     ImageBackground,
-    StatusBar
+    StatusBar,
+    TextInput,
+    Image
 } from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
-import { images, COLORS, SIZES, FONTS } from "../constants";
+import { images, COLORS, SIZES, FONTS,icons } from "../constants";
 
 import { CustomButton } from "../components";
+import { borderBottomColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const Login = ({ navigation }) => {
 
@@ -16,7 +19,7 @@ const Login = ({ navigation }) => {
         return (
             <View
                 style={{
-                    height: SIZES.height > 700 ? "65%" : "60%"
+                    height: SIZES.height > 700 ? "60%" : "55%"
                 }}
             >
                 <ImageBackground
@@ -64,17 +67,6 @@ const Login = ({ navigation }) => {
                     paddingHorizontal: SIZES.padding,
                 }}
             >
-                {/* Description */}
-                <Text
-                    style={{
-                        marginTop: SIZES.radius,
-                        width: '70%',
-                        color: COLORS.lightOrange,
-                        ...FONTS.body3
-                    }}
-                >
-                    Black belt in the kitchen
-                </Text>
 
                 {/* Buttons */}
                 <View
@@ -83,28 +75,70 @@ const Login = ({ navigation }) => {
                         justifyContent: 'center',
                     }}
                 >
-                    <CustomButton
-                        buttonText="Login"
-                        buttonContainerStyle={{
-                            paddingVertical: 18,
-                            borderRadius: 20,
+                    <View
+                        style={{
+                            marginHorizontal: SIZES.padding,
+                            marginBottom: SIZES.padding,
                         }}
-                        colors={[COLORS.darkViolet, COLORS.lightViolet]}
-                        onPress={() => navigation.replace("Home")}
-                    />
+                    >
+                        <TextInput
+                            style={{
+                                marginLeft: SIZES.radius,
+                                marginBottom: SIZES.radius,
+                                color: COLORS.white,
+                                ...FONTS.body3,
+                                borderBottomColor: COLORS.darkOrange,
+                                borderBottomWidth: 1,
+                            }}
+                            placeholderTextColor={COLORS.gray}
+                            placeholder="Email/Phone number"
+                        />
 
-                    <CustomButton
-                        buttonText="Sign Up"
-                        buttonContainerStyle={{
-                            marginTop: SIZES.radius,
-                            paddingVertical: 18,
-                            borderRadius: 20,
-                            borderColor: COLORS.lightViolet,
-                            borderWidth: 1,
+                        <TextInput
+                            style={{
+                                marginLeft: SIZES.radius,
+                                color: COLORS.white,
+                                ...FONTS.body3,
+                                borderBottomColor: COLORS.darkOrange,
+                                borderBottomWidth: 1,
+
+                            }}
+                            secureTextEntry={true}
+                            placeholderTextColor={COLORS.gray}
+                            placeholder="Password"
+                        />
+                    </View>
+                    
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            marginHorizontal: SIZES.padding,
+                            alignItems: 'center',
+                            height: 80,
                         }}
-                        colors={[]}
-                        onPress={() => navigation.replace("Home")}
-                    />
+                    >
+                        <CustomButton
+                            buttonText="Login"
+                            buttonContainerStyle={{
+                                paddingVertical: 18,
+                                borderRadius: 20,
+                            }}
+                            colors={[COLORS.darkOrange, COLORS.lightOrange]}
+                            onPress={() => navigation.replace("Home")}
+                        />
+
+                        <CustomButton
+                            buttonText="Sign Up"
+                            buttonContainerStyle={{
+                                paddingVertical: 18,
+                                borderRadius: 20,
+                                borderColor: COLORS.darkOrange,
+                                borderWidth: 1,
+                            }}
+                            colors={[]}
+                            onPress={() => navigation.replace("Home")}
+                        />
+                    </View>
                 </View>
             </View>
         )

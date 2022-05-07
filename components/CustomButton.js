@@ -6,13 +6,16 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 
-import { COLORS, FONTS } from "../constants";
+import { COLORS, FONTS, SIZES } from "../constants";
 
 const CustomButton = ({ buttonText, buttonContainerStyle, onPress, colors }) => {
 
     if (colors.length > 0) {
         return (
             <TouchableOpacity
+                style = {{
+                    flex:1,
+                }}
                 onPress={onPress}
             >
                 <LinearGradient
@@ -25,7 +28,7 @@ const CustomButton = ({ buttonText, buttonContainerStyle, onPress, colors }) => 
                         style={{
                             textAlign: 'center',
                             color: COLORS.white,
-                            ...FONTS.h2,
+                            ...FONTS.h3,
                         }}
                     >
                         {buttonText}
@@ -36,14 +39,14 @@ const CustomButton = ({ buttonText, buttonContainerStyle, onPress, colors }) => 
     } else {
         return (
             <TouchableOpacity
-                style={{ ...buttonContainerStyle }}
+                style={{ ...buttonContainerStyle, flex:1, marginLeft:'3%'}}
                 onPress={onPress}
             >
                 <Text
                     style={{
                         textAlign: 'center',
                         color: COLORS.white,
-                        ...FONTS.h2,
+                        ...FONTS.h3,
                     }}
                 >
                     {buttonText}
